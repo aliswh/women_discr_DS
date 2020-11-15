@@ -1,7 +1,9 @@
 #LIMITAZIONE DELLA RESPONSABILITA'. 
 #Il software è fornito "così com'è", senza garanzie di  sorta.
+library(rstudioapi)
+setwd(dirname(getActiveDocumentContext()$path))
 fileInput = "DISCRIM_Microdati_Anno_2011.txt"
-DF_DISCRIM_A2011<- read.delim2 (fileInput)
+DF_DISCRIM_A2011<- read.delim2(fileInput)
 attr(DF_DISCRIM_A2011, "label") <- c(
 "Ripartizione geografica",
 "Numero di componenti la famiglia",

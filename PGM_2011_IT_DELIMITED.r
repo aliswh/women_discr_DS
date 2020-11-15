@@ -1,8 +1,7 @@
-setwd("C:/Users/alice/Downloads")
 #LIMITAZIONE DELLA RESPONSABILITA'. 
 #Il software è fornito "così com'è", senza garanzie di  sorta.
 fileInput = "DISCRIM_Microdati_Anno_2011.txt"
-DF_DISCRIM_A2011<- read.delim2 (fileInput,  header=T, sep=" ",  quote="",  na.strings = ".")
+DF_DISCRIM_A2011<- read.delim2 (fileInput)
 attr(DF_DISCRIM_A2011, "label") <- c(
 "Ripartizione geografica",
 "Numero di componenti la famiglia",

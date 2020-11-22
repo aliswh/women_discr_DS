@@ -1,7 +1,6 @@
-#LIMITAZIONE DELLA RESPONSABILITA'. 
-#Il software è fornito "così com'è", senza garanzie di  sorta.
-library(rstudioapi)
-setwd(dirname(getActiveDocumentContext()$path))
+# Data use exclusively for statistical purposes
+# Processing data provided by Istat, the responsibility for the analysis and processing is not to be attributed to Istat.
+
 fileInput = "DISCRIM_Microdati_Anno_2011.txt"
 DF_DISCRIM_A2011<- read.delim2(fileInput)
 attr(DF_DISCRIM_A2011, "label") <- c(

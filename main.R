@@ -21,8 +21,9 @@ list_col = c("RIP","PADRENATO","MADRENATO","CARICOLAV","UOMOPRIMA",
              "SESSO","ETA","ISTR","CONDIZ"
 )
 
-# select cols from dataframe
+# select cols from data frame
 df = data.frame(DF_DISCRIM_A2011[list_col])
+names(df)
 
 # get Fact values per selected col
 getFact <- function(list_col) {
@@ -33,21 +34,6 @@ getFact <- function(list_col) {
   return(getFact_list)
 }
 fact_list = getFact(list_col)
-
-t <- table(RIP_Fact)
-pie(table(RIP_Fact))
-prop.table(t)*100
-
-table(ETA_Fact)
-df$SESSO
-
-makeStrata <- function(i, s, z, a) { # sex, zone, age
-  strata = data.frame()
-  if ((df$SESSO[i] == s) & (df$RIP[i] == z) & (df$ETA[i] == a)) {
-    strata <- rbind(strata, df[i,])
-  }
-  return(strata)
-}
 
 strata_names <- c('f_NO_1', 'f_NO_2', 'f_NO_3', 'f_NO_4', 'f_NO_5',
                   'f_NE_1', 'f_NE_2', 'f_NE_3', 'f_NE_4', 'f_NE_5',
@@ -60,13 +46,31 @@ strata_names <- c('f_NO_1', 'f_NO_2', 'f_NO_3', 'f_NO_4', 'f_NO_5',
                   'm_SI_1', 'm_SI_2', 'm_SI_3', 'm_SI_4', 'm_SI_5'
 )
 
-f_NO_1 <- data.frame()
-f_NO_2 <- data.frame()
+# create list of dataframes named after strata_names values
+strata_df_list <- c()
+strata_df_list <- setNames(replicate(40, data.frame(col.names = names(df))), strata_names)
 
-for (i in 1:length(df$RIP)) {
-  f_NO_1 <- rbind(f_NO_1, makeStrata(i, 2, 1, 1))
-  f_NO_2 <- rbind(f_NO_2, makeStrata(i, 2, 1, 2))
+# create strata - 40 total
+c <- 1 # counter
+for (s in 1:2) {
+  for (z in 1:4) {
+    for (a in 1:5) {
+      # subset original data frame based on 3 attributes
+      strata_df_list[c] <- lapply(50, function(x){subset(df, df$SESSO==s & df$RIP==z & df$ETA==a)})
+      c <- c + 1 # increment counter
+    }
+  }
 }
 
-finalsample <- f_NO_1[sample(nrow(f_NO_1), 15),]
+# sampling - 600 records
+sample <- data.frame()
+for (i in 1:40) {
+  tempdf <- as.data.frame(strata_df_list[i]) # get df from df list
+  colnames(tempdf) <- list_col # rename col to match final_sample
+  row_index <- c(sample(nrow(tempdf), 15)) # simple random sampling of 15 rows
+  tempdf <- tempdf[row_index, ] # get the selected records from temporary df
+  sample <- rbind(sample, tempdf) # add to sample 
+}
+
+# factoring script
 source("factoring.R")

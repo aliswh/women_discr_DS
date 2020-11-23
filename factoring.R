@@ -1,4 +1,4 @@
-attr(finalsample, "label") <- c(
+attr(sample, "label") <- c(
   "Ripartizione geografica",
   "Suo padre è nato in Italia o all’estero?",
   "Sua madre è nata in Italia o all’estero?",
@@ -50,7 +50,7 @@ attr(finalsample, "label") <- c(
   "Qual è il titolo di studio più elevato che ha conseguito?",
   "Condizione professionale")
 
-RIP_Fact <- factor(finalsample$RIP, 
+RIP_Fact <- factor(sample$RIP, 
                    levels=c(1, 
                             2, 
                             3, 
@@ -61,19 +61,19 @@ RIP_Fact <- factor(finalsample$RIP,
                             "Sud e Isole")) 
 
 
-PADRENATO_Fact <- factor(finalsample$PADRENATO, 
+PADRENATO_Fact <- factor(sample$PADRENATO, 
                          levels=c(1, 
                                   2), 
                          labels=c("Italia", 
                                   "Estero")) 
 
 
-MADRENATO_Fact <- factor(finalsample$MADRENATO, 
+MADRENATO_Fact <- factor(sample$MADRENATO, 
                          levels=c(1, 
                                   2), 
                          labels=c("Italia", 
                                   "Estero")) 
-CARICOLAV_Fact <- factor(finalsample$CARICOLAV, 
+CARICOLAV_Fact <- factor(sample$CARICOLAV, 
                          levels=c(1, 
                                   2, 
                                   3, 
@@ -82,14 +82,14 @@ CARICOLAV_Fact <- factor(finalsample$CARICOLAV,
                                   "Sì, di tanto in tanto", 
                                   "Sì, ma raramente", 
                                   "No, mai")) 
-UOMOPRIMA_Fact <- factor(finalsample$UOMOPRIMA, 
+UOMOPRIMA_Fact <- factor(sample$UOMOPRIMA, 
                          levels=c(1, 
                                   2, 
                                   3), 
                          labels=c("D'accordo", 
                                   "Né d'accordo né contrario", 
                                   "Contrario"))
-UOMOSOLDI_Fact <- factor(finalsample$UOMOSOLDI, 
+UOMOSOLDI_Fact <- factor(sample$UOMOSOLDI, 
                          levels=c(1, 
                                   2, 
                                   3, 
@@ -100,7 +100,7 @@ UOMOSOLDI_Fact <- factor(finalsample$UOMOSOLDI,
                                   "Per niente")) 
 
 
-UOMODECIDE_Fact <- factor(finalsample$UOMODECIDE, 
+UOMODECIDE_Fact <- factor(sample$UOMODECIDE, 
                           levels=c(1, 
                                    2, 
                                    3, 
@@ -111,7 +111,7 @@ UOMODECIDE_Fact <- factor(finalsample$UOMODECIDE,
                                    "Per niente")) 
 
 
-NODONNASUP_Fact <- factor(finalsample$NODONNASUP, 
+NODONNASUP_Fact <- factor(sample$NODONNASUP, 
                           levels=c(1, 
                                    2, 
                                    3, 
@@ -122,7 +122,7 @@ NODONNASUP_Fact <- factor(finalsample$NODONNASUP,
                                    "Poco", 
                                    "Per niente", 
                                    "Non sa"))
-FAMOSTACOLO_Fact <- factor(finalsample$FAMOSTACOLO, 
+FAMOSTACOLO_Fact <- factor(sample$FAMOSTACOLO, 
                            levels=c(1, 
                                     2, 
                                     3, 
@@ -135,7 +135,7 @@ FAMOSTACOLO_Fact <- factor(finalsample$FAMOSTACOLO,
                                     "Non sa")) 
 
 
-PIUDONNE_Fact <- factor(finalsample$PIUDONNE, 
+PIUDONNE_Fact <- factor(sample$PIUDONNE, 
                         levels=c(1, 
                                  2, 
                                  3, 
@@ -146,7 +146,7 @@ PIUDONNE_Fact <- factor(finalsample$PIUDONNE,
                                  "Per niente")) 
 
 
-DIVISIONEFAM_Fact <- factor(finalsample$DIVISIONEFAM, 
+DIVISIONEFAM_Fact <- factor(sample$DIVISIONEFAM, 
                             levels=c(1, 
                                      2, 
                                      3, 
@@ -157,7 +157,7 @@ DIVISIONEFAM_Fact <- factor(finalsample$DIVISIONEFAM,
                                      "Per niente")) 
 
 
-INADATTI_Fact <- factor(finalsample$INADATTI, 
+INADATTI_Fact <- factor(sample$INADATTI, 
                         levels=c(1, 
                                  2, 
                                  3, 
@@ -168,7 +168,7 @@ INADATTI_Fact <- factor(finalsample$INADATTI,
                                  "Per niente")) 
 
 
-PIUCURA_Fact <- factor(finalsample$PIUCURA, 
+PIUCURA_Fact <- factor(sample$PIUCURA, 
                        levels=c(1, 
                                 2, 
                                 3, 
@@ -179,7 +179,7 @@ PIUCURA_Fact <- factor(finalsample$PIUCURA,
                                 "Per niente")) 
 
 
-D_DISCRIM_Fact <- factor(finalsample$D_DISCRIM, 
+D_DISCRIM_Fact <- factor(sample$D_DISCRIM, 
                          levels=c(1, 
                                   2, 
                                   3, 
@@ -190,7 +190,7 @@ D_DISCRIM_Fact <- factor(finalsample$D_DISCRIM,
                                   "No, per niente")) 
 
 
-D_DISCRIM5AA_Fact <- factor(finalsample$D_DISCRIM5AA, 
+D_DISCRIM5AA_Fact <- factor(sample$D_DISCRIM5AA, 
                             levels=c(1, 
                                      2, 
                                      3, 
@@ -199,19 +199,19 @@ D_DISCRIM5AA_Fact <- factor(finalsample$D_DISCRIM5AA,
                                      "Meno discriminate", 
                                      "Non c'è differenza", 
                                      "Non sa"))
-RINUNCLAV_Fact <- factor(finalsample$RINUNCLAV, 
+RINUNCLAV_Fact <- factor(sample$RINUNCLAV, 
                          levels=c(1, 
                                   2), 
                          labels=c("Sì", 
                                   "No")) 
-RINUNCCAMBIO_Fact <- factor(finalsample$RINUNCCAMBIO, 
+RINUNCCAMBIO_Fact <- factor(sample$RINUNCCAMBIO, 
                             levels=c(1, 
                                      2), 
                             labels=c("Sì", 
                                      "No")) 
 
 
-RINUNINC_Fact <- factor(finalsample$RINUNINC, 
+RINUNINC_Fact <- factor(sample$RINUNINC, 
                         levels=c(1, 
                                  2, 
                                  3, 
@@ -220,70 +220,70 @@ RINUNINC_Fact <- factor(finalsample$RINUNINC,
                                  "Sì, ha rinunciato per altri motivi", 
                                  "No, ha accettato", 
                                  "No, non gli è stato mai proposto"))
-S_DISCRIM_Fact <- factor(finalsample$S_DISCRIM, 
+S_DISCRIM_Fact <- factor(sample$S_DISCRIM, 
                          levels=c(1, 
                                   2), 
                          labels=c("Sì", 
                                   "No"))
-S_SESSO_Fact <- factor(finalsample$S_SESSO, 
+S_SESSO_Fact <- factor(sample$S_SESSO, 
                        levels=c(1, 
                                 2), 
                        labels=c("Sì", 
                                 "No"))
-S_ASPET_Fact <- factor(finalsample$S_ASPET, 
+S_ASPET_Fact <- factor(sample$S_ASPET, 
                        levels=c(1, 
                                 2), 
                        labels=c("Sì", 
                                 "No"))
-C_DISCRIM_Fact <- factor(finalsample$C_DISCRIM, 
+C_DISCRIM_Fact <- factor(sample$C_DISCRIM, 
                          levels=c(1, 
                                   2, 
                                   3), 
                          labels=c("Sì", 
                                   "No", 
                                   "Non ho mai cercato lavoro"))
-C_RETRINF_Fact <- factor(finalsample$C_RETRINF, 
+C_RETRINF_Fact <- factor(sample$C_RETRINF, 
                          levels=c(0, 
                                   3), 
                          labels=c("Assenza", 
                                   "Presenza")) 
-C_GRAVID_Fact <- factor(finalsample$C_GRAVID, 
+C_GRAVID_Fact <- factor(sample$C_GRAVID, 
                         levels=c(1, 
                                  2), 
                         labels=c("Sì", 
                                  "No")) 
 
 
-C_SESSO_Fact <- factor(finalsample$C_SESSO, 
+C_SESSO_Fact <- factor(sample$C_SESSO, 
                        levels=c(1, 
                                 2), 
                        labels=c("Sì", 
                                 "No"))
-C_ASPET_Fact <- factor(finalsample$C_ASPET, 
+C_ASPET_Fact <- factor(sample$C_ASPET, 
                        levels=c(1, 
                                 2), 
                        labels=c("Sì", 
                                 "No"))
-L_DISCRIM_Fact <- factor(finalsample$L_DISCRIM, 
+L_DISCRIM_Fact <- factor(sample$L_DISCRIM, 
                          levels=c(1, 
                                   2), 
                          labels=c("Sì", 
                                   "No"))
-L_LICENZ_Fact <- factor(finalsample$L_LICENZ, 
+L_LICENZ_Fact <- factor(sample$L_LICENZ, 
                         levels=c(0, 
                                  4), 
                         labels=c("Assenza", 
                                  "Presenza")) 
 
 
-L_LICGRAV_Fact <- factor(finalsample$L_LICGRAV, 
+L_LICGRAV_Fact <- factor(sample$L_LICGRAV, 
                          levels=c(1, 
                                   2), 
                          labels=c("Sì", 
                                   "No")) 
 
 
-L_QDLICGRAV_Fact <- factor(finalsample$L_QDLICGRAV, 
+L_QDLICGRAV_Fact <- factor(sample$L_QDLICGRAV, 
                            levels=c(1, 
                                     2, 
                                     3, 
@@ -292,21 +292,21 @@ L_QDLICGRAV_Fact <- factor(finalsample$L_QDLICGRAV,
                                     "Nei primi 3 mesi dalla nascita del bambino", 
                                     "Dopo i 3 mesi e nell'arco del primo anno di vita del bambino", 
                                     "Dopo il primo anno di vita del bambino")) 
-L_LICENZ2_Fact <- factor(finalsample$L_LICENZ2, 
+L_LICENZ2_Fact <- factor(sample$L_LICENZ2, 
                          levels=c(1, 
                                   2), 
                          labels=c("Sì", 
                                   "No")) 
 
 
-L_LICGRAV2_Fact <- factor(finalsample$L_LICGRAV2, 
+L_LICGRAV2_Fact <- factor(sample$L_LICGRAV2, 
                           levels=c(1, 
                                    2), 
                           labels=c("Sì", 
                                    "No")) 
 
 
-L_QDLICGRAV2_Fact <- factor(finalsample$L_QDLICGRAV2, 
+L_QDLICGRAV2_Fact <- factor(sample$L_QDLICGRAV2, 
                             levels=c(1, 
                                      2, 
                                      3, 
@@ -315,32 +315,32 @@ L_QDLICGRAV2_Fact <- factor(finalsample$L_QDLICGRAV2,
                                      "Nei primi 3 mesi dalla nascita del bambino", 
                                      "Dopo i 3 mesi e nell'arco del primo anno di vita del bambino", 
                                      "Dopo il primo anno di vita del bambino")) 
-L_CAPAC2_Fact <- factor(finalsample$L_CAPAC2, 
+L_CAPAC2_Fact <- factor(sample$L_CAPAC2, 
                         levels=c(1, 
                                  2), 
                         labels=c("Sì", 
                                  "No")) 
-L_RETRINF2_Fact <- factor(finalsample$L_RETRINF2, 
+L_RETRINF2_Fact <- factor(sample$L_RETRINF2, 
                           levels=c(1, 
                                    2), 
                           labels=c("Sì", 
                                    "No"))
-L_SESSO_Fact <- factor(finalsample$L_SESSO, 
+L_SESSO_Fact <- factor(sample$L_SESSO, 
                        levels=c(1, 
                                 2), 
                        labels=c("Sì", 
                                 "No")) 
-L_ASPET_Fact <- factor(finalsample$L_ASPET, 
+L_ASPET_Fact <- factor(sample$L_ASPET, 
                        levels=c(1, 
                                 2), 
                        labels=c("Sì", 
                                 "No"))
-UMILIATA_Fact <- factor(finalsample$UMILIATA, 
+UMILIATA_Fact <- factor(sample$UMILIATA, 
                         levels=c(1, 
                                  2), 
                         labels=c("Sì", 
                                  "No"))
-MIN_Fact <- factor(finalsample$MIN, 
+MIN_Fact <- factor(sample$MIN, 
                    levels=c(1, 
                             2, 
                             3, 
@@ -349,12 +349,12 @@ MIN_Fact <- factor(finalsample$MIN,
                             "Sì, è stato aggredito fisicamente", 
                             "Sì, è stato minacciato e aggredito fisicamente (in episodi diversi)", 
                             "No, non è mai capitato"))
-RELAZOUT_Fact <- factor(finalsample$RELAZOUT, 
+RELAZOUT_Fact <- factor(sample$RELAZOUT, 
                         levels=c(1, 
                                  2), 
                         labels=c("Si", 
                                  "No")) 
-CUCINA_Fact <- factor(finalsample$CUCINA, 
+CUCINA_Fact <- factor(sample$CUCINA, 
                       levels=c(1, 
                                2, 
                                3, 
@@ -367,7 +367,7 @@ CUCINA_Fact <- factor(finalsample$CUCINA,
                                "Prevalentemente l’intervistato/a", 
                                "Entrambi in egual misura", 
                                "Nessuno dei due"))
-PULIZIA_Fact <- factor(finalsample$PULIZIA, 
+PULIZIA_Fact <- factor(sample$PULIZIA, 
                        levels=c(1, 
                                 2, 
                                 3, 
@@ -382,7 +382,7 @@ PULIZIA_Fact <- factor(finalsample$PULIZIA,
                                 "Nessuno dei due")) 
 
 
-CURAFIGLI_Fact <- factor(finalsample$CURAFIGLI, 
+CURAFIGLI_Fact <- factor(sample$CURAFIGLI, 
                          levels=c(1, 
                                   2, 
                                   3, 
@@ -399,7 +399,7 @@ CURAFIGLI_Fact <- factor(finalsample$CURAFIGLI,
                                   "Non pertinente")) 
 
 
-DIVISLAV_Fact <- factor(finalsample$DIVISLAV, 
+DIVISLAV_Fact <- factor(sample$DIVISLAV, 
                         levels=c(1, 
                                  2, 
                                  3), 
@@ -408,7 +408,7 @@ DIVISLAV_Fact <- factor(finalsample$DIVISLAV,
                                  "Ingiusta nei riguardi del partner")) 
 
 
-PIUGUAD_Fact <- factor(finalsample$PIUGUAD, 
+PIUGUAD_Fact <- factor(sample$PIUGUAD, 
                        levels=c(1, 
                                 2, 
                                 3, 
@@ -423,19 +423,19 @@ PIUGUAD_Fact <- factor(finalsample$PIUGUAD,
                                 "L’intervistato/a e il /la suo/a partner non lavorano/non guadagnano")) 
 
 
-S_PERCOSS_Fact <- factor(finalsample$S_PERCOSS, 
+S_PERCOSS_Fact <- factor(sample$S_PERCOSS, 
                          levels=c(0, 
                                   5), 
                          labels=c("Assente", 
                                   "Presente")) 
 
 
-SESSO_Fact <- factor(finalsample$SESSO, 
+SESSO_Fact <- factor(sample$SESSO, 
                      levels=c(1, 
                               2), 
                      labels=c("Maschio", 
                               "Femmina")) 
-ETA_Fact <- factor(finalsample$ETA, 
+ETA_Fact <- factor(sample$ETA, 
                    levels=c(1, 
                             2, 
                             3, 
@@ -446,7 +446,7 @@ ETA_Fact <- factor(finalsample$ETA,
                             "45-54", 
                             "55-64", 
                             "65-74"))
-ISTR_Fact <- factor(finalsample$ISTR, 
+ISTR_Fact <- factor(sample$ISTR, 
                     levels=c(1, 
                              3, 
                              4, 
@@ -463,7 +463,7 @@ ISTR_Fact <- factor(finalsample$ISTR,
                              "Laurea specialistica  (corsi di secondo livello di 2 anni);Laurea di 4 anni o più (vecchio ordinamento o laurea specialistica/magistrale a ciclo unico)", 
                              "Titolo di studio post-laurea (diploma di specializzazione, master universitario di 1° e di 2° livello);Titolo di dottore di ricerca", 
                              "Non sa/Non ricorda"))
-CONDIZ_Fact <- factor(finalsample$CONDIZ, 
+CONDIZ_Fact <- factor(sample$CONDIZ, 
                       levels=c(1, 
                                2, 
                                4, 
@@ -477,4 +477,4 @@ CONDIZ_Fact <- factor(finalsample$CONDIZ,
                                "Ritirati dal lavoro", 
                                "Inabili al lavoro;In altra condizione")) 
 
-save.image (file="finalsample.RData")
+save.image (file="sample.RData")

@@ -1,8 +1,10 @@
+# source this once!
+
 # libraries import
 library(rstudioapi)
 # set wd to source file directory
 setwd(dirname(getActiveDocumentContext()$path))
-# load entire dataframe
+# load entire data frame
 source("PGM_2011_IT_DELIMITED.r")
 
 # select list of cols
@@ -74,3 +76,5 @@ for (i in 1:40) {
 
 # factoring script
 source("factoring.R")
+
+save(sample, file = "sample.RData")

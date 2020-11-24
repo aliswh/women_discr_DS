@@ -74,7 +74,4 @@ for (i in 1:40) {
   sample <- rbind(sample, tempdf) # add to sample 
 }
 
-# factoring script
-source("factoring.R")
-
 save(sample, file = "sample.RData")
